@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="VayalMozhi - Empowering farmers with technology. Agriculture marketplace, crop disease detection, market prices, voice guidance, and government schemes.">
+  <title>VayalMozhi - Agriculture Support Platform</title>
+  <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+
+  <!-- ==================== NAVIGATION ==================== -->
+  <nav class="neo-nav" id="main-nav">
+    <div class="container">
+      <a href="#home" class="nav-logo">
+        <div class="nav-logo-icon">
+          <img src="/static/images/vmmlogo.png" alt="VayalMozhi Logo" style="width: 100%; height: 100%; object-fit: contain;">
+        </div>
+        <span data-en="VayalMozhi" data-ta="வயல்மொழி">VayalMozhi</span>
+      </a>
+
+      <button class="hamburger" id="hamburger-btn" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+
+      <div class="nav-links" id="nav-links">
+        <a href="#home" class="nav-link active" data-page="home">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          <span data-en="Home" data-ta="முகப்பு">Home</span>
+        </a>
+        <a href="#marketplace" class="nav-link" data-page="marketplace">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 002 1.61h9.72a2 2 0 002-1.61L23 6H6"/></svg>
+          <span data-en="Marketplace" data-ta="சந்தை">Marketplace</span>
+        </a>
+        <a href="#prices" class="nav-link" data-page="prices">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>
+          <span data-en="Market Prices" data-ta="சந்தை விலைகள்">Market Prices</span>
+        </a>
+        <a href="#disease" class="nav-link" data-page="disease">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 019.8 6.9C15.5 4.9 17 3.5 17 3.5s1.5 2.5 2.5 6.5"/><path d="M6.8 11a5.5 5.5 0 008.8 4.3"/><circle cx="18" cy="16" r="3"/><line x1="21" y1="19" x2="22" y2="22"/></svg>
+          <span data-en="Disease Detection" data-ta="நோய் கண்டறிதல்">Disease Detection</span>
+        </a>
+        <a href="#schemes" class="nav-link" data-page="schemes">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+          <span data-en="Schemes" data-ta="திட்டங்கள்">Schemes</span>
+        </a>
+
+        <a href="#login" class="nav-link" data-page="login">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h4a2 2 0 012 2v14a2 2 0 01-2 2h-4"/><polyline points="10 17 15 12 10 7"/><line x1="15" y1="12" x2="3" y2="12"/></svg>
+          <span data-en="Login" data-ta="உள்நுழை">Login</span>
+        </a>
+        <a href="#profile" class="nav-link" data-page="profile" style="display:none;">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          <span data-en="Profile" data-ta="சுயவிவரம்">Profile</span>
+        </a>
+        <!-- Language Toggle -->
+        <div class="lang-toggle">
+          <button class="lang-toggle-btn active" data-lang="en">EN</button>
+          <button class="lang-toggle-btn" data-lang="ta">தமிழ்</button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ==================== NOTIFICATION ==================== -->
+  <div class="neo-notification" id="notification">
+    <div class="neo-notification-title" id="notification-title"></div>
+    <div class="neo-notification-message" id="notification-message"></div>
+  </div>
+
+  <!-- ==================== MAIN CONTENT ==================== -->
+  <main>
+
+    <!-- ========== HOME PAGE ========== -->
+    <section class="page-section active" id="page-home">
+      <div class="hero">
+        <div class="container">
+          <div class="hero-content">
+            <div class="hero-text">
+              <h1 class="hero-title" data-en="Empowering Farmers with Technology" data-ta="தொழில்நுட்பம் மூலம் விவசாயிகளை மேம்படுத்துதல்">
+                Empowering Farmers with <span>Technology</span>
+              </h1>
+              <p class="hero-subtitle" data-en="Your complete agriculture support platform. Access marketplace, track prices, detect crop diseases, and explore government schemes." data-ta="உங்கள் முழுமையான விவசாய ஆதரவு தளம். சந்தையை அணுகவும், விலைகளைக் கண்காணிக்கவும், பயிர் நோய்களைக் கண்டறியவும் மற்றும் அரசு திட்டங்களை ஆராயவும்.">
+                Your complete agriculture support platform. Access marketplace, track prices, detect crop diseases, and explore government schemes - all in one place.
+              </p>
+              <div class="flex-row flex-wrap">
+                <a href="#marketplace" class="neo-btn neo-btn-primary neo-btn-lg" data-en="Explore Marketplace" data-ta="சந்தையை ஆராயுங்கள்">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="20" height="20"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 002 1.61h9.72a2 2 0 002-1.61L23 6H6"/></svg>
+                  Explore Marketplace
+                </a>
+                <a href="#login" class="neo-btn neo-btn-success neo-btn-lg" data-en="Get Started" data-ta="தொடங்கவும்">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="20" height="20"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                  Get Started
+                </a>
+              </div>
+            </div>
+
+            <div class="hero-image-wrapper">
+              <img src="static/images/herofarmer.jpg" alt="Rural Agriculture" class="hero-photo" onerror="this.src='https://plus.unsplash.com/premium_photo-1661962383794-6b6697868470?w=800&h=600&fit=crop'">
+              <div class="hero-badge" data-en="Trusted by 10k+ Farmers" data-ta="10ஆயிரத்திற்கும் மேற்பட்ட விவசாயிகளால் நம்பப்படுகிறது">Trusted by 10k+ Farmers</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Impact Stats -->
+      <div class="impact-stats">
+        <div class="container">
+          <div class="stats-grid">
+            <div class="stat-item">
+              <div class="stat-val">10,000+</div>
+              <div class="stat-lbl" data-en="Active Farmers" data-ta="செயலில் உள்ள விவசாயிகள்">Active Farmers</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-val">40+</div>
+              <div class="stat-lbl" data-en="Crops Tracked" data-ta="கண்காணிக்கப்படும் பயிர்கள்">Crops Tracked</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-val">15+</div>
+              <div class="stat-lbl" data-en="Market Regions" data-ta="சந்தை மண்டலங்கள்">Market Regions</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-val">₹0</div>
+              <div class="stat-lbl" data-en="Listing Fees" data-ta="பட்டியல் கட்டணம்">Listing Fees</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Success Stories Area -->
+      <div class="stories-section">
+        <div class="container">
+          <div class="section-header text-center">
+            <h2 data-en="Farmer Success Stories" data-ta="விவசாயிகளின் வெற்றி கதைகள்">Farmer Success Stories</h2>
+            <p data-en="Real impact from farmers across Tamil Nadu using VayalMozhi." data-ta="VayalMozhi-ஐப் பயன்படுத்தி தமிழ்நாடு முழுவதும் உள்ள விவசாயிகளின் நிஜமான தாக்கம்.">Real impact from farmers using VayalMozhi.</p>
+          </div>
+          
+          <div class="story-card">
+            <img src="static/images/sfarmer.jpg" alt="Farmer Ravi" class="story-img" onerror="this.onerror=null; this.src='/static/images/farmer_success.png';">
+            <div class="story-text">
+              <div class="story-quote" data-en="&quot;VayalMozhi helped me find a buyer for my paddy crop in just 2 days. The price I got was 15% higher than local dealers.&quot;" data-ta="&quot;VayalMozhi எனது நெற்பயிருக்கு வெறும் 2 நாட்களில் வாங்குபவரைக் கண்டறிய உதவியது. உள்ளூர் விற்பனையாளர்களை விட 15% அதிக விலை எனக்குக் கிடைத்தது.&quot;">"VayalMozhi helped me find a buyer for my paddy crop in just 2 days."</div>
+              <div class="stat-lbl">— Ravi Kumar, Coimbatore</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+          <div class="features-grid">
+            <div class="feature-card" data-color="gold" onclick="window.location.hash='marketplace'">
+              <div class="feature-card-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 002 1.61h9.72a2 2 0 002-1.61L23 6H6"/></svg>
+              </div>
+              <h4 data-en="Marketplace" data-ta="சந்தை">Marketplace</h4>
+              <p data-en="Buy and sell livestock, seeds, fertilizers, and agricultural machinery from farmers across Tamil Nadu." data-ta="தமிழ்நாடு முழுவதும் உள்ள விவசாயிகளிடமிருந்து கால்நடைகள், விதைகள், உரங்கள் மற்றும் இயந்திரங்களை வாங்கவும் விற்கவும்.">Buy and sell livestock, seeds, fertilizers, and agricultural machinery from farmers across Tamil Nadu.</p>
+            </div>
+
+            <div class="feature-card" data-color="green" onclick="window.location.hash='prices'">
+              <div class="feature-card-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>
+              </div>
+              <h4 data-en="Market Prices" data-ta="சந்தை விலைகள்">Market Prices</h4>
+              <p data-en="Track real-time daily crop prices across different markets with trend analysis." data-ta="வெவ்வேறு சந்தைகளில் தினசரி பயிர் விலைகளை நிகழ்நேரத்தில் கண்காணிக்கவும்.">Track real-time daily crop prices across different markets with trend analysis.</p>
+            </div>
+
+            <div class="feature-card" data-color="orange" onclick="window.location.hash='disease'">
+              <div class="feature-card-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 019.8 6.9C15.5 4.9 17 3.5 17 3.5s1.5 2.5 2.5 6.5"/><path d="M6.8 11a5.5 5.5 0 008.8 4.3"/><circle cx="18" cy="16" r="3"/><line x1="21" y1="19" x2="22" y2="22"/></svg>
+              </div>
+              <h4 data-en="Disease Detection" data-ta="நோய் கண்டறிதல்">Disease Detection</h4>
+              <p data-en="Upload crop images to detect diseases instantly. Get organic and chemical treatment recommendations." data-ta="பயிர் நோய்களை உடனடியாகக் கண்டறிய படங்களைப் பதிவேற்றுங்கள். இயற்கை மற்றும் இரசாயன சிகிச்சை பரிந்துரைகளைப் பெறுங்கள்.">Upload crop images to detect diseases instantly. Get organic and chemical treatment recommendations.</p>
+            </div>
+
+            <div class="feature-card" data-color="blue" onclick="window.location.hash='schemes'">
+              <div class="feature-card-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+              </div>
+              <h4 data-en="Government Schemes" data-ta="அரசு திட்டங்கள்">Government Schemes</h4>
+              <p data-en="Discover agriculture-related government schemes, benefits, and application procedures." data-ta="விவசாயம் தொடர்பான அரசு திட்டங்கள், சலுகைகள் மற்றும் விண்ணப்ப நடைமுறைகளை அறியுங்கள்.">Discover agriculture-related government schemes, benefits, and application procedures.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== MARKETPLACE PAGE ========== -->
+    <section class="page-section" id="page-marketplace">
+      <div class="container">
+        <div class="section-header section-header-with-action">
+          <div>
+            <h2 data-en="Marketplace" data-ta="சந்தை">Marketplace</h2>
+            <p data-en="Buy and sell agricultural products from farmers across the region" data-ta="பிராந்தியம் முழுவதும் உள்ள விவசாயிகளிடமிருந்து விவசாய பொருட்களை வாங்கவும் விற்கவும்">Buy and sell agricultural products from farmers across the region</p>
+          </div>
+          <button class="neo-btn neo-btn-primary neo-btn-lg" id="add-product-btn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="20" height="20"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            <span data-en="Add Product" data-ta="பொருள் சேர்">Add Product</span>
+          </button>
+        </div>
+
+        <div class="filter-bar" id="marketplace-filters">
+          <button class="filter-btn active" data-category="All" data-en="All" data-ta="அனைத்தும்">All</button>
+          <button class="filter-btn" data-category="Livestock" data-en="Livestock" data-ta="கால்நடைகள்">Livestock</button>
+          <button class="filter-btn" data-category="Seeds" data-en="Seeds" data-ta="விதைகள்">Seeds</button>
+          <button class="filter-btn" data-category="Fertilizers" data-en="Fertilizers" data-ta="உரங்கள்">Fertilizers</button>
+          <button class="filter-btn" data-category="Machinery" data-en="Machinery" data-ta="இயந்திரங்கள்">Machinery</button>
+          <button class="filter-btn" data-category="Crops" data-en="Crops" data-ta="பயிர்கள்">Crops</button>
+          <div class="search-input-wrapper">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+            <input type="text" class="neo-input" id="marketplace-search" placeholder="Search products..." data-en="Search products..." data-ta="தயாரிப்புகளைத் தேடுங்கள்...">
+          </div>
+        </div>
+
+        <div class="products-grid" id="products-grid">
+          <!-- Products rendered dynamically -->
+        </div>
+
+        <div class="empty-state" id="marketplace-empty" style="display:none;">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 002 1.61h9.72a2 2 0 002-1.61L23 6H6"/></svg>
+          <h4 data-en="No Products Found" data-ta="பொருட்கள் எதுவும் கிடைக்கவில்லை">No Products Found</h4>
+          <p data-en="Try adjusting your search or filter to find what you need." data-ta="உங்களுக்குத் தேவையானதைக் கண்டறிய தேடல் அல்லது வடிகட்டியை மாற்றி முயற்சிக்கவும்.">Try adjusting your search or filter to find what you need.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== MARKET PRICES PAGE ========== -->
+    <section class="page-section" id="page-prices">
+      <div class="container">
+        <div class="section-header">
+          <h2 data-en="Daily Market Prices" data-ta="தினசரி சந்தை விலைகள்">Daily Market Prices</h2>
+          <p data-en="Today's crop prices across major agricultural markets" data-ta="முக்கிய விவசாய சந்தைகளில் இன்றைய பயிர் விலைகள்">Today's crop prices across major agricultural markets</p>
+        </div>
+
+        <div class="filter-bar">
+          <div class="search-input-wrapper">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+            <input type="text" class="neo-input" id="prices-search" placeholder="Search by crop or market..." data-en="Search by crop or market..." data-ta="பயிர் அல்லது சந்தையால் தேடுங்கள்...">
+          </div>
+          <button class="neo-btn neo-btn-sm" id="prices-view-toggle" title="Toggle view">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>
+            <span data-en="Cards" data-ta="அட்டைகள்">Cards</span>
+          </button>
+        </div>
+
+        <!-- Card View -->
+        <div class="price-cards" id="prices-card-view">
+          <!-- Prices rendered dynamically -->
+        </div>
+
+        <!-- Table View -->
+        <div class="neo-table-wrapper" id="prices-table-view" style="display:none;">
+          <table class="neo-table">
+            <thead>
+              <tr>
+                <th data-en="Crop" data-ta="பயிர்">Crop</th>
+                <th data-en="Market" data-ta="சந்தை">Market</th>
+                <th data-en="Price" data-ta="விலை">Price</th>
+                <th data-en="Unit" data-ta="அலகு">Unit</th>
+                <th data-en="Trend" data-ta="போக்கு">Trend</th>
+                <th data-en="Date" data-ta="தேதி">Date</th>
+              </tr>
+            </thead>
+            <tbody id="prices-table-body">
+              <!-- Rows rendered dynamically -->
+            </tbody>
+          </table>
+        </div>
+
+        <div class="empty-state" id="prices-empty" style="display:none;">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>
+          <h4 data-en="No Price Data" data-ta="விலைத் தகவல் இல்லை">No Price Data</h4>
+          <p data-en="No matching crop prices found. Try a different search term." data-ta="பொருத்தமான பயிர் விலைகள் கிடைக்கவில்லை. வேறு தேடல் சொல்லை முயற்சிக்கவும்.">No matching crop prices found. Try a different search term.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== DISEASE DETECTION PAGE ========== -->
+    <section class="page-section" id="page-disease">
+      <div class="container">
+        <div class="section-header">
+          <h2 data-en="Crop Disease Detection" data-ta="பயிர் நோய் கண்டறிதல்">Crop Disease Detection</h2>
+          <p data-en="Upload an image of the affected crop to identify diseases and get treatment recommendations" data-ta="நோய்களை அடையாளம் காணவும் சிகிச்சை பரிந்துரைகளைப் பெறவும் பாதிக்கப்பட்ட பயிரின் படத்தைப் பதிவேற்றுங்கள்">Upload an image of the affected crop to identify diseases and get treatment recommendations</p>
+        </div>
+
+        <div class="disease-layout">
+          <div class="disease-upload-section">
+            <div class="neo-upload" id="disease-upload-zone">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+              <div class="neo-upload-text" data-en="Drag and drop your crop image here" data-ta="உங்கள் பயிர் படத்தை இங்கே இழுத்து விடுங்கள்">Drag and drop your crop image here</div>
+              <div class="neo-upload-sub" data-en="or click to browse files (PNG, JPG, WEBP)" data-ta="அல்லது கோப்புகளை உலாவ கிளிக் செய்யவும் (PNG, JPG, WEBP)">or click to browse files (PNG, JPG, WEBP)</div>
+              <input type="file" id="disease-file-input" accept="image/png,image/jpeg,image/jpg,image/webp,image/gif">
+            </div>
+
+            <div class="image-preview" id="disease-preview">
+              <div style="margin-bottom: var(--space-3);">
+                <span class="form-label" data-en="Uploaded Image" data-ta="பதிவேற்றிய படம்">Uploaded Image</span>
+              </div>
+              <img id="disease-preview-img" src="" alt="Preview">
+              <div style="margin-top: var(--space-4);">
+                <button class="neo-btn neo-btn-success neo-btn-lg neo-btn-block" id="analyze-btn">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="20" height="20"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                  <span data-en="Analyze Image" data-ta="படத்தை பகுப்பாய்வு செய்">Analyze Image</span>
+                </button>
+              </div>
+            </div>
+
+            <div class="loading-indicator" id="disease-loading">
+              <div class="spinner"></div>
+              <div class="loading-text" data-en="Analyzing crop image..." data-ta="பயிர் படத்தை பகுப்பாய்வு செய்கிறது...">Analyzing crop image...</div>
+              <p class="text-sm" style="color: var(--color-gray-500);" data-en="This may take a few moments" data-ta="இது சில நொடிகள் ஆகலாம்">This may take a few moments</p>
+            </div>
+          </div>
+
+          <div class="disease-result" id="disease-result">
+            <div class="neo-card">
+              <h3 style="margin-bottom: var(--space-4);" data-en="Analysis Result" data-ta="பகுப்பாய்வு முடிவு">Analysis Result</h3>
+              
+              <div style="margin-bottom: var(--space-4);">
+                <span class="form-label" data-en="Disease Identified" data-ta="கண்டறியப்பட்ட நோய்">Disease Identified</span>
+                <h4 id="disease-name" style="color: var(--color-red);"></h4>
+              </div>
+
+              <div style="margin-bottom: var(--space-4);">
+                <span class="form-label" data-en="Description" data-ta="விவரம்">Description</span>
+                <p id="disease-description" class="card-desc"></p>
+              </div>
+
+              <div style="margin-bottom: var(--space-5);">
+                <span class="form-label" data-en="Confidence Score" data-ta="நம்பகத் தன்மை மதிப்பெண்">Confidence Score</span>
+                <div class="confidence-bar">
+                  <div class="confidence-fill" id="confidence-fill" style="width: 0%"></div>
+                </div>
+              </div>
+
+              <div class="treatment-section">
+                <h4>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="#00A878" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="22" height="22"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                  <span data-en="Organic Treatments" data-ta="இயற்கை சிகிச்சைகள்">Organic Treatments</span>
+                </h4>
+                <ul class="treatment-list treatment-organic" id="organic-treatments">
+                  <!-- Rendered dynamically -->
+                </ul>
+              </div>
+
+              <div class="treatment-section">
+                <h4>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="#FF6B35" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="22" height="22"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg>
+                  <span data-en="Chemical Treatments" data-ta="இரசாயன சிகிச்சைகள்">Chemical Treatments</span>
+                </h4>
+                <ul class="treatment-list treatment-inorganic" id="inorganic-treatments">
+                  <!-- Rendered dynamically -->
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== GOVERNMENT SCHEMES PAGE ========== -->
+    <section class="page-section" id="page-schemes">
+      <div class="container">
+        <div class="section-header">
+          <h2 data-en="Government Schemes" data-ta="அரசு திட்டங்கள்">Government Schemes</h2>
+          <p data-en="Explore agriculture-related government schemes and benefits available for farmers" data-ta="விவசாயிகளுக்குக் கிடைக்கும் விவசாயம் தொடர்பான அரசு திட்டங்கள் மற்றும் சலுகைகளை ஆராயுங்கள்">Explore agriculture-related government schemes and benefits available for farmers</p>
+        </div>
+
+        <div class="filter-bar">
+          <div class="search-input-wrapper">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+            <input type="text" class="neo-input" id="schemes-search" placeholder="Search schemes..." data-en="Search schemes..." data-ta="திட்டங்களைத் தேடுங்கள்...">
+          </div>
+        </div>
+
+        <div class="schemes-grid" id="schemes-grid">
+          <!-- Schemes rendered dynamically -->
+        </div>
+
+        <div class="empty-state" id="schemes-empty" style="display:none;">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+          <h4 data-en="No Schemes Found" data-ta="திட்டங்கள் எதுவும் கிடைக்கவில்லை">No Schemes Found</h4>
+          <p data-en="Try a different search term to find relevant schemes." data-ta="பொருத்தமான திட்டங்களைக் கண்டறிய வேறு தேடல் சொல்லை முயற்சிக்கவும்.">Try a different search term to find relevant schemes.</p>
+        </div>
+      </div>
+    </section>
+
+
+
+    <!-- ========== LOGIN / REGISTER PAGE ========== -->
+    <section class="page-section" id="page-login">
+      <div class="container">
+        <div class="auth-container">
+          <div class="auth-tabs">
+            <div class="auth-tab active" data-mode="login" data-en="Login" data-ta="உள்நுழை">Login</div>
+            <div class="auth-tab" data-mode="register" data-en="Register" data-ta="பதிவு செய்">Register</div>
+          </div>
+          
+          <div class="auth-form-card">
+            <!-- Login Selection -->
+            <div id="login-section">
+              <h3 style="margin-bottom: var(--space-4);" data-en="Welcome Back" data-ta="மீண்டும் வரவேற்கிறோம்">Welcome Back</h3>
+              <form id="login-form">
+                <div class="form-group">
+                  <label class="form-label" for="login-email" data-en="Email Address" data-ta="மின்னஞ்சல் முகவரி">Email Address</label>
+                  <input type="email" class="neo-input" id="login-email" required placeholder="name@example.com">
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="login-password">Password</label>
+                  <input type="password" class="neo-input" id="login-password" required placeholder="Your password">
+                </div>
+                <button type="submit" class="neo-btn neo-btn-primary neo-btn-lg neo-btn-block">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 3h4a2 2 0 012 2v14a2 2 0 01-2 2h-4"/><polyline points="10 17 15 12 10 7"/><line x1="15" y1="12" x2="3" y2="12"/></svg>
+                  Sign In
+                </button>
+              </form>
+              <div class="auth-footer">
+                Don't have an account? <button onclick="Auth.switchAuthMode('register')">Register here</button>
+              </div>
+            </div>
+
+            <!-- Register Selection -->
+            <div id="register-section" style="display:none;">
+              <h3 style="margin-bottom: var(--space-4);">Create Account</h3>
+              <form id="register-form">
+                <div class="form-group">
+                  <label class="form-label">I am a...</label>
+                  <div class="role-selector">
+                    <div class="role-option active" data-role="farmer">Rural Farmer</div>
+                    <div class="role-option" data-role="consumer">Consumer</div>
+                  </div>
+                  <input type="hidden" id="reg-role" value="farmer">
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="reg-name">Full Name</label>
+                  <input type="text" class="neo-input" id="reg-name" required placeholder="User Name">
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="reg-email">Email Address</label>
+                  <input type="email" class="neo-input" id="reg-email" required placeholder="name@example.com">
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="reg-password">Password</label>
+                  <input type="password" class="neo-input" id="reg-password" required placeholder="Create password">
+                </div>
+                <div class="grid-2">
+                  <div class="form-group">
+                    <label class="form-label" for="reg-phone">Phone Number</label>
+                    <input type="text" class="neo-input" id="reg-phone" placeholder="+91 XXXXX XXXXX">
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label" for="reg-location">Location</label>
+                    <input type="text" class="neo-input" id="reg-location" placeholder="City, State">
+                  </div>
+                </div>
+                <button type="submit" class="neo-btn neo-btn-success neo-btn-lg neo-btn-block">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M16 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="8.5" cy="7" r="4"/><line x1="20" y1="8" x2="20" y2="14"/><line x1="23" y1="11" x2="17" y2="11"/></svg>
+                  Create Account
+                </button>
+              </form>
+              <div class="auth-footer">
+                Already have an account? <button onclick="Auth.switchAuthMode('login')">Login here</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== PROFILE PAGE ========== -->
+    <section class="page-section" id="page-profile">
+      <div class="container" id="profile-content">
+        <!-- Profile rendered dynamically -->
+      </div>
+    </section>
+    
+    <!-- ========== SELLER DIRECTORY PAGE ========== -->
+    <section class="page-section" id="page-sellers">
+      <div class="container">
+        <div class="section-header">
+          <div style="display:flex; align-items:center; gap:var(--space-4);">
+            <button class="nav-back-btn" onclick="window.history.back()">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" width="20" height="20"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+            </button>
+            <div>
+              <h2 id="seller-directory-title" data-en="Seller Directory" data-ta="விற்பனையாளர் அடைவு">Seller Directory</h2>
+              <p id="seller-directory-subtitle"></p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="seller-directory-grid" id="seller-directory-list">
+          <!-- Sellers rendered dynamically -->
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==================== ADD PRODUCT MODAL ==================== -->
+  <div class="neo-modal-overlay" id="add-product-modal">
+    <div class="neo-modal">
+      <div class="neo-modal-header">
+        <h3 data-en="Add New Product" data-ta="புதிய பொருளைச் சேர்">Add New Product</h3>
+        <button class="neo-modal-close" id="close-product-modal">&times;</button>
+      </div>
+      <div class="neo-modal-body">
+        <form id="add-product-form" enctype="multipart/form-data">
+          <div class="form-group">
+            <label class="form-label" for="product-title" data-en="Product Title" data-ta="பொருள் தலைப்பு">Product Title</label>
+            <input type="text" class="neo-input" id="product-title" name="title" placeholder="e.g. IR-64 Paddy Seeds (25kg)" required>
+          </div>
+          <div class="grid-2">
+            <div class="form-group">
+              <label class="form-label" for="product-category" data-en="Category" data-ta="வகை">Category</label>
+              <select class="neo-select" id="product-category" name="category" required>
+                <option value="">Select Category</option>
+                <option value="Livestock">Livestock</option>
+                <option value="Seeds">Seeds</option>
+                <option value="Fertilizers">Fertilizers</option>
+                <option value="Machinery">Machinery</option>
+                <option value="Crops">Crops</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="product-price" data-en="Price (INR)" data-ta="விலை (INR)">Price (INR)</label>
+              <input type="number" class="neo-input" id="product-price" name="price" placeholder="e.g. 1500" required>
+            </div>
+          </div>
+          <!-- Rental Option for Machinery -->
+          <div class="form-group" id="rental-option-group" style="display:none; background: var(--color-blue-50, #EFF6FF); padding: var(--space-4); border-radius: var(--radius-md); border: 2px dashed var(--color-blue);">
+            <label class="form-label" style="display:flex; align-items:center; gap:var(--space-2); cursor:pointer;">
+              <input type="checkbox" id="product-rental" name="rental_available" style="width:18px; height:18px;">
+              <span data-en="Available for Rental" data-ta="வாடகைக்கு கிடைக்கும்">Available for Rental</span>
+            </label>
+            <div id="rental-fields" style="display:none; margin-top:var(--space-3);">
+              <div class="grid-2">
+                <div class="form-group" style="margin-bottom:0;">
+                  <label class="form-label" data-en="Rental Price (INR)" data-ta="வாடகை விலை (INR)">Rental Price (INR)</label>
+                  <input type="number" class="neo-input" id="product-rental-price" name="rental_price" placeholder="e.g. 2000">
+                </div>
+                <div class="form-group" style="margin-bottom:0;">
+                  <label class="form-label" data-en="Rental Period" data-ta="வாடகை காலம்">Rental Period</label>
+                  <select class="neo-select" id="product-rental-unit" name="rental_unit">
+                    <option value="per day">Per Day / நாளுக்கு</option>
+                    <option value="per week">Per Week / வாரத்திற்கு</option>
+                    <option value="per month">Per Month / மாதத்திற்கு</option>
+                    <option value="per season">Per Season / பருவத்திற்கு</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="grid-2">
+            <div class="form-group">
+              <label class="form-label" for="product-unit" data-en="Unit" data-ta="அலகு">Unit</label>
+              <input type="text" class="neo-input" id="product-unit" name="unit" placeholder="e.g. per bag, per unit">
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="product-location" data-en="Location" data-ta="இடம்">Location</label>
+              <input type="text" class="neo-input" id="product-location" name="location" placeholder="e.g. Salem, Tamil Nadu">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="product-description" data-en="Description" data-ta="விவரம்">Description</label>
+            <textarea class="neo-textarea" id="product-description" name="description" placeholder="Describe your product in detail..."></textarea>
+          </div>
+          <div class="grid-2">
+            <div class="form-group">
+              <label class="form-label" for="product-seller" data-en="Seller Name" data-ta="விற்பனையாளர் பெயர்">Seller Name</label>
+              <input type="text" class="neo-input" id="product-seller" name="seller" placeholder="Your name">
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="product-phone" data-en="Phone Number" data-ta="தொலைபேசி எண்">Phone Number</label>
+              <input type="text" class="neo-input" id="product-phone" name="phone" placeholder="+91 XXXXX XXXXX">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label" data-en="Product Image" data-ta="பொருள் படம்">Product Image</label>
+            <input type="file" class="neo-input" id="product-image" name="image" accept="image/*" style="padding: var(--space-2);">
+          </div>
+          <button type="submit" class="neo-btn neo-btn-success neo-btn-lg neo-btn-block">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="20" height="20"><polyline points="20 6 9 17 4 12"/></svg>
+            <span data-en="List Product" data-ta="பொருளை பட்டியலிடு">List Product</span>
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== CONTACT SELLER MODAL ==================== -->
+  <div class="neo-modal-overlay" id="contact-modal">
+    <div class="neo-modal" style="max-width: 450px;">
+      <div class="neo-modal-header" style="background-color: var(--color-green);">
+        <h3 style="color: white;" data-en="Contact Seller" data-ta="விற்பனையாளரைத் தொடர்பு கொள்க">Contact Seller</h3>
+        <button class="neo-modal-close" id="close-contact-modal">&times;</button>
+      </div>
+      <div class="neo-modal-body">
+        <div style="margin-bottom: var(--space-4);">
+          <span class="form-label" data-en="Seller" data-ta="விற்பனையாளர்">Seller</span>
+          <h4 id="contact-seller-name"></h4>
+        </div>
+        <div style="margin-bottom: var(--space-4);">
+          <span class="form-label" data-en="Product" data-ta="பொருள்">Product</span>
+          <p id="contact-product-name"></p>
+        </div>
+        <div style="margin-bottom: var(--space-5);">
+          <span class="form-label" data-en="Phone Number" data-ta="தொலைபேசி எண்">Phone Number</span>
+          <h4 id="contact-phone" style="color: var(--color-blue);"></h4>
+        </div>
+        <a id="contact-call-btn" href="tel:" class="neo-btn neo-btn-success neo-btn-lg neo-btn-block" style="margin-bottom: var(--space-3);">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="20" height="20"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+          <span data-en="Call Seller" data-ta="விற்பனையாளரை அழை">Call Seller</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="neo-footer" id="app-footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">VayalMozhi</div>
+        <div class="footer-text" data-en="Empowering Farmers with Technology" data-ta="தொழில்நுட்பம் மூலம் விவசாயிகளை மேம்படுத்துதல்">Empowering Farmers with Technology</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==================== SCRIPTS ==================== -->
+  <script src="/static/js/i18n.js?v=4"></script>
+  <script src="/static/js/auth.js?v=4"></script>
+  <script src="/static/js/app.js?v=4"></script>
+  <script src="/static/js/marketplace.js?v=4"></script>
+  <script src="/static/js/prices.js?v=4"></script>
+  <script src="/static/js/disease.js?v=4"></script>
+  <script src="/static/js/schemes.js?v=4"></script>
+
+</body>
+</html>

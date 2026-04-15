@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "name": "Demo Farmer",
+    "email": "farmer@demo.com",
+    "password": "farmer123",
+    "role": "farmer",
+    "phone": "+91 98765 43210",
+    "location": "Thanjavur, Tamil Nadu",
+    "created": "2026-04-01"
+  },
+  {
+    "id": 2,
+    "name": "Demo Consumer",
+    "email": "consumer@demo.com",
+    "password": "consumer123",
+    "role": "consumer",
+    "phone": "+91 87654 32109",
+    "location": "Chennai, Tamil Nadu",
+    "created": "2026-04-01"
+  },
+  {
+    "id": 3,
+    "name": "Ajith",
+    "email": "farmerajith@gmail.com",
+    "password": "leo messi31",
+    "role": "farmer",
+    "phone": "9344483294",
+    "location": "Coimbatore , TamilNadu",
+    "created": "2026-04-07"
+  },
+  {
+    "id": 4,
+    "name": "Anurathi",
+    "email": "farmeranu@gmail.com",
+    "password": "leo messi31",
+    "role": "farmer",
+    "phone": "9344483294",
+    "location": "Coimbatore , TamilNadu",
+    "created": "2026-04-07"
+  },
+  {
+    "id": 5,
+    "name": "Ajithk",
+    "email": "farmerajithk@gmail.com",
+    "password": "leo messi31",
+    "role": "consumer",
+    "phone": "9344483294",
+    "location": "Coimbatore , TamilNadu",
+    "created": "2026-04-07"
+  },
+  {
+    "id": 6,
+    "name": "Amirtha Varshini",
+    "email": "r.amirthavarshini31@gmail.com",
+    "password": "leo messi31",
+    "role": "farmer",
+    "phone": "7339387167",
+    "location": "Coimbatore, Tamilnadu",
+    "created": "2026-04-07"
+  }
+]

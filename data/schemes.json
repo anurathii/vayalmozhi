@@ -1,0 +1,98 @@
+[
+  {
+    "id": 1,
+    "title": "PM-KISAN Samman Nidhi",
+    "description": "Under this scheme, the Government of India provides income support of Rs. 6,000 per year to all landholding farmer families across the country. The amount is paid in three equal installments of Rs. 2,000 each, directly into the bank accounts of eligible farmers.",
+    "eligibility": "All landholding farmer families with cultivable land holding. Small and marginal farmers with combined land holding up to 2 hectares are given priority.",
+    "benefits": "Rs. 6,000 per year in three installments of Rs. 2,000 each, transferred directly to bank accounts via Direct Benefit Transfer (DBT).",
+    "link": "https://pmkisan.gov.in/",
+    "title_ta": "பிஎம்-கிசான் சம்மான் நிதி",
+    "description_ta": "இந்தத் திட்டத்தின் கீழ், அனைத்து விவசாயிகளுக்கும் ஆண்டுக்கு ரூ. 6,000 வருமான ஆதரவு வழங்கப்படுகிறது.",
+    "eligibility_ta": "அனைத்து சிறு மற்றும் குறு விவசாயிகள்.",
+    "benefits_ta": "ஆண்டுக்கு ரூ. 6000 நேரடி வங்கி பரிமாற்றம் மூலமாக வழங்கப்படும்."
+  },
+  {
+    "id": 2,
+    "title": "Pradhan Mantri Fasal Bima Yojana (PMFBY)",
+    "description": "A comprehensive crop insurance scheme that provides financial support to farmers suffering crop loss or damage due to unforeseen events like natural calamities, pests, and diseases. The scheme covers all food and oilseed crops and annual horticultural crops.",
+    "eligibility": "All farmers including sharecroppers and tenant farmers growing notified crops in notified areas are eligible. Both loanee and non-loanee farmers can apply.",
+    "benefits": "Insurance coverage for crop loss due to natural calamities, pests, and diseases. Premium rates: 2% for Kharif, 1.5% for Rabi, and 5% for commercial crops. Government subsidizes the remaining premium.",
+    "link": "https://pmfby.gov.in/",
+    "title_ta": "பிரதான் மந்திரி பயிர் காப்பீட்டு திட்டம்",
+    "description_ta": "இயற்கை சீற்றங்களால் ஏற்படும் பயிர் இழப்புக்கு காப்பீடு வழங்கும் திட்டம்.",
+    "eligibility_ta": "அனைத்து விவசாயிகளும் விண்ணப்பிக்கலாம்.",
+    "benefits_ta": "இயற்கை சீற்றங்களால் ஏற்படும் இழப்புக்கு முழு காப்பீடு."
+  },
+  {
+    "id": 3,
+    "title": "Soil Health Card Scheme",
+    "description": "The Government issues Soil Health Cards to farmers carrying crop-wise recommendations of nutrients and fertilizers required for individual farms. This helps farmers improve soil productivity through judicious use of inputs.",
+    "eligibility": "All farmers across India are eligible. Soil samples are collected from farms at a grid of 2.5 hectares in irrigated areas and 10 hectares in rain-fed areas.",
+    "benefits": "Free soil testing and analysis. Customized recommendations for nutrient management. Helps reduce input costs and improve crop yields through optimized fertilizer usage.",
+    "link": "https://soilhealth.dac.gov.in/",
+    "title_ta": "மண்வள அட்டை திட்டம்",
+    "description_ta": "விவசாயிகளுக்கு மண்வள அட்டைகளை வழங்கி தேவையான உரங்கள் பற்றிய பரிந்துரைகளை அளிக்கும் திட்டம்.",
+    "eligibility_ta": "இந்தியாவில் உள்ள அனைத்து விவசாயிகளுக்கும் பொருந்தும்.",
+    "benefits_ta": "இலவச மண் பரிசோதனை மற்றும் உர ஆலோசனைகள்."
+  },
+  {
+    "id": 4,
+    "title": "Tamil Nadu State Agricultural Subsidy",
+    "description": "The Tamil Nadu Government provides subsidized agricultural inputs including seeds, fertilizers, and farm equipment to farmers at reduced prices through the Department of Agriculture. Special focus on promoting modern farming techniques.",
+    "eligibility": "All farmers registered with the Tamil Nadu Department of Agriculture. Priority given to small and marginal farmers with landholding below 5 acres. Must possess Aadhaar-linked bank account.",
+    "benefits": "Subsidized seeds at 50% reduced price. Free fertilizer kits for new farmers. Up to 75% subsidy on micro-irrigation equipment. Free crop insurance for select crops.",
+    "link": "https://www.tn.gov.in/department/2",
+    "title_ta": "தமிழ்நாடு மாநில வேளாண் மானியம்",
+    "description_ta": "வேளாண் துறை மானிய விலையில் விதைகள், உரங்கள் மற்றும் உபகரணங்கள் வழங்குகிறது.",
+    "eligibility_ta": "தமிழ்நாடு வேளாண் துறையில் பதிவு செய்த விவசாயிகள்.",
+    "benefits_ta": "விதைகளுக்கு 50% மானியம் மற்றும் இலவச உர கிட்கள்."
+  },
+  {
+    "id": 5,
+    "title": "Kisan Credit Card (KCC) Scheme",
+    "description": "Kisan Credit Card provides affordable institutional credit to farmers for their agricultural needs including crop production, post-harvest expenses, farm maintenance, and allied activities. The scheme simplifies the lending process for farmers.",
+    "eligibility": "All farmers including individual or joint borrowers, tenant farmers, oral lessees, and sharecroppers. Also available for SHGs or Joint Liability Groups of farmers. Must be engaged in farming activities.",
+    "benefits": "Credit limit up to Rs. 3 lakh at 4% interest rate (with prompt repayment). No requirement for collateral up to Rs. 1.6 lakh. Flexible repayment based on crop cycles. Coverage for crop insurance under PMFBY.",
+    "link": "https://www.pmjdy.gov.in/kcc",
+    "title_ta": "கிசான் கிரெடிட் கார்டு (KCC)",
+    "description_ta": "விவசாய தேவைகளுக்காக குறைந்த வட்டியில் கடன் வழங்கும் திட்டம்.",
+    "eligibility_ta": "விவசாயம் செய்யும் அனைத்து விவசாயிகளும் இதற்கு தகுதியானவர்கள்.",
+    "benefits_ta": "ரூபாய் 3 லட்சம் வரை 4% வட்டியில் கடன்."
+  },
+  {
+    "id": 6,
+    "title": "National Mission on Sustainable Agriculture (NMSA)",
+    "description": "NMSA aims to make Indian agriculture more productive, sustainable, remunerative, and climate-resilient. It focuses on integrated farming, soil health management, water use efficiency, and synergizing resource conservation technology.",
+    "eligibility": "All farmers across India. Special provisions for farmers in rain-fed and climate-vulnerable areas. Groups and cooperatives working on sustainable agriculture practices are also eligible.",
+    "benefits": "Financial assistance for adopting sustainable farming practices. Support for organic farming certification. Subsidy on water conservation structures. Training and capacity building programs.",
+    "link": "https://nmsa.dac.gov.in/",
+    "title_ta": "தேசிய நிலையான வேளாண்மை இயக்கம்",
+    "description_ta": "இந்தியாவின் வேளாண்மையை அதிக லாபகரமானதாகவும் பாதுகாப்பானதாகவும் மாற்றுவதே இதன் நோக்கம்.",
+    "eligibility_ta": "இயற்கை விவசாயம் செய்யும் அனைத்து விவசாயிகள்.",
+    "benefits_ta": "இயற்கை விவசாயத்திற்கு நிதி உதவி மற்றும் பயிற்சி."
+  },
+  {
+    "id": 7,
+    "title": "e-NAM (National Agriculture Market)",
+    "description": "e-NAM is an online trading platform for agricultural commodities in India. It connects APMC mandis across India to create a unified national market for agricultural commodities, enabling better price discovery and transparent trading.",
+    "eligibility": "All farmers, traders, and buyers registered with any APMC mandi connected to e-NAM. Farmers need to register with their local mandi and obtain a unique ID.",
+    "benefits": "Direct access to buyers across India. Better price discovery through transparent bidding. Online payment system for secure transactions. Real-time market price information. Reduced intermediary costs.",
+    "link": "https://enam.gov.in/",
+    "title_ta": "இ-நாம் (e-NAM)",
+    "description_ta": "விவசாயிகள் தங்கள் விளைபொருட்களை ஆன்லைனில் விற்பனை செய்வதற்கான தேசிய சந்தை.",
+    "eligibility_ta": "அனைத்து விவசாயிகள் மற்றும் பதிவு செய்த வியாபாரிகள்.",
+    "benefits_ta": "நடுவர்கள் இல்லாமல் நேரடியாக சிறந்த விலையில் விற்கலாம்."
+  },
+  {
+    "id": 8,
+    "title": "Sub-Mission on Agricultural Mechanization (SMAM)",
+    "description": "SMAM aims to increase farm mechanization reach to small and marginal farmers and areas where farm power availability is low. It provides subsidies for purchase of farm machinery and establishes Custom Hiring Centres.",
+    "eligibility": "All farmers are eligible for subsidies. Priority given to SC, ST, small and marginal farmers, and women farmers. Farmer Producer Organizations (FPOs) and cooperatives eligible for Custom Hiring Centre establishment.",
+    "benefits": "Subsidy of 40-50% on purchase of agricultural machinery. Support for establishing Farm Machinery Banks. Financial assistance for Custom Hiring Centres. Training on operation and maintenance of farm machinery.",
+    "link": "https://agrimachinery.nic.in/",
+    "title_ta": "வேளாண் இயந்திரமயமாக்கல் திட்டம்",
+    "description_ta": "சிறு மற்றும் குறு விவசாயிகளுக்கு மானிய விலையில் வேளாண் இயந்திரங்களை வழங்கும் திட்டம்.",
+    "eligibility_ta": "அனைத்து விவசாயிகளுக்கும் மானியம் உண்டு, சிறு குறு விவசாயிகளுக்கு முன்னுரிமை.",
+    "benefits_ta": "இயந்திரங்கள் வாங்க 40-50% மானியம்."
+  }
+]
